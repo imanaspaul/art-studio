@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <TheNav/>
-    <div class="container">
+    <div>
       <router-view/>
     </div>
   </div>
@@ -16,7 +16,10 @@ export default {
 </script>
 
 <style>
-@media only screen and (max-width: 1330px) {
+body{
+  font-family: arial;
+}
+@media only screen and (max-width: 1345px) {
   .nav-item{
     margin-right:0px;
 }
