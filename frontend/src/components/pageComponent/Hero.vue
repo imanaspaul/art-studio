@@ -2,7 +2,7 @@
     <div class="hero text-center">
         <img class="hero-img" src="https://res.cloudinary.com/manascode/image/upload/v1595652449/final-gallery_y64bwl.webp" alt="Image-hero">
         <div class="gallery-hero">
-
+            <SliderGallery/>
         </div>
         <div class="gallery-text-hero">
             <h1 class="gallery-text-h1">INTERNATIONAL</h1> 
@@ -12,8 +12,12 @@
 </template>
 
 <script>
+import SliderGallery from '../common/SliderGallery'
 export default {
-    name: "Hero"
+    name: "Hero",
+    components : {
+        SliderGallery
+    }
 }
 </script>
 <style>
@@ -31,7 +35,7 @@ export default {
     object-fit: cover;
 }
 .gallery-hero{
-    background-color: pink;
+    /* background-color: #FF0000; */
     width: 300px;
     height: 250px;
     position: absolute;

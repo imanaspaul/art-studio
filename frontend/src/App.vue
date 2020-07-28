@@ -7,10 +7,10 @@
   </div>
 </template>
 <script>
-import TheNav from './components/common/TheNav'
+// import TheNav from './components/common/TheNav'
 export default {
   components : {
-    TheNav
+    TheNav  : () => import(/* webpackChunkName: "Thenav" */'./components/common/TheNav'),
   }
 }
 </script>
@@ -18,6 +18,9 @@ export default {
 <style>
 body{
   font-family: arial;
+}
+p{
+    font-size: 20px;
 }
 @media only screen and (max-width: 1345px) {
   .nav-item{

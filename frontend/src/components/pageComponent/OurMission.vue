@@ -30,8 +30,6 @@ export default {
     border-bottom: 2px solid red;
     transform-origin: center 1.5px;
 }
-p{
-    font-size: 20px;
-}
+
 
 </style>

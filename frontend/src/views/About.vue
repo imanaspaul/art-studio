@@ -1,5 +1,60 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <swiper class="swiper py-5" :options="swiperOption">
+    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 4</swiper-slide>
+    <swiper-slide>Slide 5</swiper-slide>
+    <swiper-slide>Slide 6</swiper-slide>
+    <swiper-slide>Slide 7</swiper-slide>
+    <swiper-slide>Slide 8</swiper-slide>
+    <swiper-slide>Slide 9</swiper-slide>
+    <swiper-slide>Slide 10</swiper-slide>
+    <div class="swiper-button-prev" slot="button-prev"></div>
+    <div class="swiper-button-next" slot="button-next"></div>
+  </swiper>
 </template>
+
+<script>
+  import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+  import 'swiper/css/swiper.css'
+
+  export default {
+    name: 'swiper-example-centered-auto',
+    title: 'Centered slides + Auto slides per view',
+    components: {
+      Swiper,
+      SwiperSlide
+    },
+    data() {
+      return {
+        swiperOption: {
+          slidesPerView: '1',
+          centeredSlides: true,
+          spaceBetween: 30,
+          loop: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          }
+        }
+      }
+    }
+  }
+</script>
+
+<style lang="css" scoped>
+  .swiper-slide {
+    width: 60%;
+  }
+  .swiper-slide:nth-child(2n) {
+    width: 40%;
+  }
+  .swiper-slide:nth-child(3n) {
+    width: 20%;
+  }
+</style>
