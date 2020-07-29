@@ -62,4 +62,8 @@ export default {
 .nav-item:last-child{
     margin-right: 0px;
 }
+.nav-link{
+  font-size: 11px!important;
+  font-weight: 500!important;
+}
 </style>

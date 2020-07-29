@@ -4,7 +4,10 @@
      <OurMission des='The International Art Showcase (IAS) was established as a platform for emerging and established artists to exhibit their work to a global audience. Our website features a curated selection of contemporary art, as well as international art market news relevant to professional artists.'/>
      <div class="container py-5 text-center">
        <Heading title="ONLINE GALLERY" subheading='Our online exhibitions give artists an opportunity to receive international exposure.' />
-       <img src="https://static.wixstatic.com/media/6b110f_b2a162fc682d4cc2ad7b75288eae9f92~mv2.png/v1/fill/w_1170,h_502,al_c,q_90/virtual-3d-gallery_orig.webp" alt="gallery-image" class="img-fluid" width="900px">
+       <v-lazy-image 
+       src="https://static.wixstatic.com/media/6b110f_b2a162fc682d4cc2ad7b75288eae9f92~mv2.png/v1/fill/w_1170,h_502,al_c,q_90/virtual-3d-gallery_orig.webp" alt="gallery-image" class="img-fluid" style="width:900px"
+       src-placeholder="https://coolbackgrounds.io/images/backgrounds/black/black-contour-f41038db.svg"
+       />
        <br>
        <Mybtn name="ONLINE GALLERY"/>
        <div class="text-center px-5">
@@ -12,7 +15,12 @@
        </div>
        <Mybtn name="CALL-FOR-ARTIST"/>
      </div>
-     <img src="../assets/bg.jpg" alt="backgroud image" class="img-fluid">
+     <img 
+      src="../assets/bg.webp"
+      src-placeholder="https://coolbackgrounds.io/images/backgrounds/black/black-contour-f41038db.svg"
+      alt="backgroud image" 
+      class="img-fluid"
+     >
     <div class="container-fluid bg-white">
        <div class="container">
         <OurMission
@@ -37,3 +45,12 @@ export default {
   }
 }
 </script>
+<style lang="css" scoped>
+.v-lazy-image {
+  filter: blur(10px);
+  transition: filter 0.7s;
+}
+.v-lazy-image-loaded {
+  filter: blur(0);
+}
+</style>

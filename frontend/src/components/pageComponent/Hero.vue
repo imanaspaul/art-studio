@@ -1,6 +1,10 @@
 <template>
     <div class="hero text-center">
-        <img class="hero-img" src="https://res.cloudinary.com/manascode/image/upload/v1595652449/final-gallery_y64bwl.webp" alt="Image-hero">
+        <v-lazy-image class="hero-img" 
+        src="https://res.cloudinary.com/manascode/image/upload/v1595652449/final-gallery_y64bwl.webp" alt="Image-hero" 
+        style="width:100%; height:690px"
+        src-placeholder='https://img.freepik.com/free-photo/closeup-elegant-crumpled-white-silk-fabric-cloth-texture_50039-909.jpg?size=626&ext=jpg'
+        />
         <div class="gallery-hero">
             <SliderGallery/>
         </div>
@@ -20,11 +24,18 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
+.v-lazy-image {
+  filter: blur(10px);
+  transition: filter 0.7s;
+}
+.v-lazy-image-loaded {
+  filter: blur(0);
+}
 .hero{
     position: relative;
     width: 100%;
-    height: 690px;
+    height: 690px!important;
     display: flex;
     justify-content: center;
     align-items: center;

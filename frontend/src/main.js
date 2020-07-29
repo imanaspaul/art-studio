@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './registerServiceWorker'
+import { VLazyImagePlugin } from "v-lazy-image";
+ 
 
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
@@ -11,7 +13,7 @@ import 'swiper/css/swiper.css'
 
 
 Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
-
+Vue.use(VLazyImagePlugin);
 
 
 Vue.config.productionTip = false
