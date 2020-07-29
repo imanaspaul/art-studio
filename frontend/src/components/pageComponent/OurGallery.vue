@@ -1,8 +1,6 @@
 <template>
-  <div class="home">
-     <Hero/>
-     <OurMission des='The International Art Showcase (IAS) was established as a platform for emerging and established artists to exhibit their work to a global audience. Our website features a curated selection of contemporary art, as well as international art market news relevant to professional artists.'/>
-     <div class="container py-5 text-center">
+  <div>
+       <div class="container py-5 text-center">
        <Heading title="ONLINE GALLERY" subheading='Our online exhibitions give artists an opportunity to receive international exposure.' />
        <v-lazy-image 
        src="https://static.wixstatic.com/media/6b110f_b2a162fc682d4cc2ad7b75288eae9f92~mv2.png/v1/fill/w_1170,h_502,al_c,q_90/virtual-3d-gallery_orig.webp" alt="gallery-image" class="img-fluid" style="width:900px"
@@ -34,28 +32,11 @@
 </template>
 
 <script>
-import Hero from '../components/pageComponent/Hero';
-import OurMission from '../components/pageComponent/OurMission';
-import Heading from '../components/common/Heading';
-import Mybtn from '../components/common/Mybtn';
-
-
 export default {
-  name: 'Home',
-  components: {
-    Hero,
-    OurMission,
-    Heading,
-    Mybtn,
-  }
+    na
 }
 </script>
-<style lang="css" scoped>
-.v-lazy-image {
-  filter: blur(10px);
-  transition: filter 0.7s;
-}
-.v-lazy-image-loaded {
-  filter: blur(0);
-}
+
+<style>
+
 </style>
