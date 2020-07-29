@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .nav-item{
     margin-right:30px;
     
