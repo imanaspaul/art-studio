@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-xl navbar-light bg-white">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="https://static.wixstatic.com/media/6b110f_870f3df6604e494b85b3ed0bac7dbcaf~mv2.png/v1/fill/w_74,h_74,al_c,q_85,usm_0.66_1.00_0.01/ias-logo-final.webp" alt="logo" width="45">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,7 +16,7 @@
             <router-link class="nav-link active" to="/ffds">CALL FOR ARTISTS</router-link>
             </li>
             <li class="nav-item">
-            <router-link class="nav-link active" to="/d">CURRENT EXHIBITIONS</router-link>
+            <router-link class="nav-link active" to="/current-exhibitions">CURRENT EXHIBITIONS</router-link>
             </li>
             <li class="nav-item">
             <router-link class="nav-link active" to="/f">PAST EXHIBITIONS</router-link>

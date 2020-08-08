@@ -39,8 +39,8 @@ p{
     margin-right: 0px;
 }
 .nav-link{
-  font-size: 11px!important;
-  font-weight: 500!important;
+  font-size: 12px!important;
+  font-weight: 600!important;
 }
 @media only screen and (max-width: 1500px) {
   .nav-item{
