@@ -11,6 +11,7 @@
             :title="comp.name"
             :description="comp.description"
             :thumbnail="comp.thumnail"
+            :to="comp.id"
            />
       </div>
   </div>

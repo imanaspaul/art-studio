@@ -1,5 +1,6 @@
-from rest_framework.generics import ListAPIView
-from . serializers import AllCompetitionSerializer
+from rest_framework.generics import ListAPIView , RetrieveAPIView
+from rest_framework.response import Response
+from . serializers import AllCompetitionSerializer, CompetitionSerializer
 from . models import Competition
 
 
@@ -16,3 +17,10 @@ class EndedCompetitions(ListAPIView):
 class AllCompetitions(ListAPIView):
     serializer_class = AllCompetitionSerializer
     queryset = Competition.objects.all()
+
+
+class SingleCompetetion(RetrieveAPIView):
+    lookup_field = 'id'
+    queryset = Competition.objects.all()
+    serializer_class = CompetitionSerializer
+

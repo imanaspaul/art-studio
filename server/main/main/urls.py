@@ -15,9 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from submission.views import ArtworktViewSet
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+# router.register(r'artworks', ArtworktViewSet, basename='artwork')
+
 
 urlpatterns = [
     path("api/v1/", include('competition.urls')),
     path("api/v1/", include('submission.urls')),
+    path("api/v1/artworks/", ArtworktViewSet.as_view({'get': 'list'})),
+    path("api/v1/artworks/<uuid:pk>", ArtworktViewSet.as_view({'get': 'retrieve'})),
     path('admin/', admin.site.urls),
 ]
+
+# urlpatterns += router.urls 

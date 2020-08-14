@@ -10,7 +10,8 @@ export default new Vuex.Store({
   state: {
     allComepetetions : null,
     error: null,
-    loading: true
+    loading: true,
+    currentComp: null
   },
   mutations: {
     setAllCompetetions(state, data){
@@ -21,12 +22,16 @@ export default new Vuex.Store({
     },
     setLoading(state, loadding){
       state.loading = loadding
+    },
+    setItem(state, payload){
+      let items = state.allComepetetions.filter((com)=> {return com.id === payload})
+      state.currentComp = items[0]
     }
   },
   actions: {
      fetchCompetetions ({commit}) {
         commit("setLoading", true)
-       axios.get(`${BASE_URL}/all-competitions/`)
+       axios.get(`${BASE_URL}/ongoing-competitions/`)
         .then((result)=>{
            commit("setLoading", false)
            commit('setAllCompetetions', result.data)
@@ -35,6 +40,16 @@ export default new Vuex.Store({
            commit("setLoading", false)
            commit('setError', error)
         })
+    },
+    setCurrent({commit}, payload){
+      console.log("Payload is", payload);
+      commit("setItem", payload)
+    }
+  },
+  getters: {
+     comp : (state, id) =>{
+       console.log(state.allComepetetions);
+       return state.allComepetetions.find((com)=> {return com.id === id})
     }
   },
   modules: {

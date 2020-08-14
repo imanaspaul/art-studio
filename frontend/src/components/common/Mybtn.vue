@@ -1,5 +1,5 @@
 <template>
-  <button type="button" class="btn btn-outline-danger my-5">{{ name }}</button>
+  <router-link :to="to"  class="btn btn-outline-danger my-5">{{ name }}</router-link>
 </template>
 
 <script>

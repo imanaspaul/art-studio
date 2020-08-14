@@ -18,7 +18,12 @@ Vue.use(VueRouter)
   {
     path: '/current-exhibitions',
     name: 'currentexhibitions',
-    component: () => import(/* webpackChunkName: "about" */ '../views/CurrentExhibiton.vue')
+    component: () => import(/* webpackChunkName: "currentexibitions" */ '../views/CurrentExhibiton.vue')
+  },
+  {
+    path: '/current-exhibitions/:id',
+    name: 'ExhibitionDetail',
+    component: () => import(/* webpackChunkName: "exhibitionDetail" */ '../views/ExhibitionDetail.vue')
   },
 ]
 

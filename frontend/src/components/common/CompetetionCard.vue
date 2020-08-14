@@ -11,7 +11,7 @@
               <p>{{ description }}</p>
           </div>
           <div class="card-footer text-center bg-white border-0 py-0">
-              <Mybtn name="SEE PERTICIPENTS"/>
+              <Mybtn name="SEE PERTICIPENTS" :to="{ name: 'ExhibitionDetail', params: { id: to }}" />
           </div>
       </div>
   </div>
@@ -25,6 +25,7 @@ export default {
         title: String,
         description: String,
         thumbnail: String,
+        to: String
     },
     components : {
         Mybtn

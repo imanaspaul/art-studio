@@ -10,7 +10,8 @@ class ArtistSerializer(serializers.ModelSerializer):
 
 
 class ArtworkSerializer(serializers.ModelSerializer):
-
+    # artwork_artist = ArtistSerializer()
     class Meta:
         model = Artwork
         fields = "__all__"
+        depth = 1

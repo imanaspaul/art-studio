@@ -9,11 +9,11 @@
        src-placeholder="https://coolbackgrounds.io/images/backgrounds/black/black-contour-f41038db.svg"
        />
        <br>
-       <Mybtn name="ONLINE GALLERY"/>
+       <Mybtn name="ONLINE GALLERY"  to='/' />
        <div class="text-center px-5">
          <p>IAS organizes juried online art shows on a monthly basis. Each exhibition is presented in one of our virtual 3D gallery spaces and features only the very best artworks submitted in response to our open-competition calls. Selected artists will gain recognition by being awarded a "Best of Show", or one of our three "Merit Award" certificates. These selected artists will also get additional exposure by being promoted on our Featured Artists page.</p>
        </div>
-       <Mybtn name="CALL-FOR-ARTIST"/>
+       <Mybtn name="CALL-FOR-ARTIST" to='/'/>
      </div>
      <img 
       src="https://res.cloudinary.com/manascode/image/upload/v1596008532/artstudio/bg_jdopzg.webp"
