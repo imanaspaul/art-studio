@@ -5,13 +5,29 @@ class ArtistSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Artist
-        fields = "__all__"
+        fields = [
+            "id", 
+            "full_name", 
+            "email", 
+            "artist_website",
+            "artist_biography", 
+            "artist_statement"
+        ]
 
 
 
 class ArtworkSerializer(serializers.ModelSerializer):
-    # artwork_artist = ArtistSerializer()
+    artist = ArtistSerializer()
     class Meta:
         model = Artwork
-        fields = "__all__"
-        depth = 1
+        fields = [
+            "id",
+            "title",
+            "medium",
+            "dimension",
+            "paid",
+            "approved",
+            "user",
+            "position",
+            "artist"
+        ]
